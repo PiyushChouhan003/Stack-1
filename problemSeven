@@ -1,0 +1,18 @@
+Question -->  https://practice.geeksforgeeks.org/problems/sort-a-stack/1
+
+class GfG{
+	public Stack<Integer> sort(Stack<Integer> s)
+	{
+		//add code here.
+		 Stack<Integer>stk = new Stack<>();
+       while(!s.isEmpty()){
+           int temp = s.pop();
+           while(!stk.isEmpty() && stk.peek()>temp){
+               s.push(stk.pop());
+           }
+           
+           stk.push(temp);
+	}
+	       return stk;
+}
+}
